@@ -25,7 +25,7 @@ function roundVal(val){
 }
 
 function calculateDistances(lat,long){
-    let d1 = haversine(lat,long,2.922562,191.650965); //De Pulze, Cyberjaya
+    let d1 = haversine(lat,long,2.922562,101.650965); //De Pulze, Cyberjaya
     let d2 = haversine(lat,long,3.073065,101.607787); //Sunway Pyramid
     let d3 = haversine(lat,long,3.158761,101,714524); //KLCC
 
