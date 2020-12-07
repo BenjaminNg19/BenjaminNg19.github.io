@@ -2,8 +2,8 @@ function haversine(lat1, long1, lat2, long2) {
     let R = 6371; //earth radius in KM
     let dLat = (lat2-lat1).toRad();
     let dLong = (long2-long1).toRad();
-    let lat1 = lat1.toRad();
-    let lat2 = lat2.toRad();
+    let dLat1 = lat1.toRad();
+    let dLat2 = lat2.toRad();
 
     let a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLong/2) * Math.sin(dLong/2) * Math.cos(lat1) * Math.cos(lat2);
     let c = 2 * Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
