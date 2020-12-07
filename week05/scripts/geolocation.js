@@ -11,5 +11,4 @@ if(navigator.geolocation){
 } else {
     alert("Geolocation is not supported by this browser.")
   }
-}
 });
