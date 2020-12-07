@@ -1,9 +1,9 @@
-let ellocate = document.getElementById(locate);
+let ellocate = document.getElementById("locate");
 ellocate.addEventListener("click",function(){
 if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
         let elLat = document.getElementById("lat");
-        let elLong = document.getElementById("Long");
+        let elLong = document.getElementById("long");
 
         elLat.innerHTML = "Lattitude : " + position.coords.latitude;
         elLong.innerHTML = "Longtitude : " + position.coords.longitude;
