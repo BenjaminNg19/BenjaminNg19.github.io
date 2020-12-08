@@ -18,4 +18,15 @@ window.onload = function(){
     freezeBtn.addEventListener("mouseup",function(){
         video.play();
     });
+
+    let seekBar = document.getElementById("seekBar");
+    seekBar.addEventListener("change",function(){
+        let time = video.duration * (seekBar.value / 100);
+        video.currentTime = time;
+    });
+    
+    video.addEventListener("timeupdate",function(){
+        let value = (100 / video.duration) * video.curentTime;
+        seekBar. = value;
+    });
 };
