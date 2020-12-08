@@ -26,7 +26,12 @@ window.onload = function(){
     });
 
     video.addEventListener("timeupdate",function(){
-        let value = (100 / video.duration) * video.curentTime;
+        let value = (100 / video.duration) * video.currentTime;
         seekBar.value = value;
+    });
+
+    let volumeCtrl = document.getElementById("volume");
+    volumeCtrl.addEventListener("change",function(){
+        video.volume = volumeCtrl.value;
     });
 };
