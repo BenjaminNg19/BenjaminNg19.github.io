@@ -21,6 +21,7 @@ function getRandomUser(){
             data.results[0].location.city + " " + data.results[0].location.state + " " + data.results[0].location.postcode 
             + " " + data.results[0].location.country;
             elAddress.innerHTML = address;
+            elEmail.innerHTML = data.results[0].email;
             elJsonResult.innerHTML = this.response;
         }
     }
