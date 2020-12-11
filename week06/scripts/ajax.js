@@ -20,7 +20,7 @@ function getRandomUser(){
     xhttp.send();
 }
 
-let elGetRandomUser = document.getElementById("getRandUserBtn");
+let elGetRandomUser = document.getElementById("getRandomUserBtn");
 elGetRandomUser.addEventListener("click",function(){
     getRandomUser();
 })
