@@ -1,5 +1,5 @@
 function GetBookings(){
-    let url = 'https://api.sheety.co/fa1df15916bcd68f8496c823102aff92/bookingApp/bookings';
+    let url = 'https://api.sheety.co/fa1df15916bcd68f8496c823102aff92/dentistBookingApp/bookings';
     fetch(url)
         .then((response) => response.json())
         .then(json => {
@@ -15,18 +15,22 @@ function GetBookings(){
             for(let i = 0; i < json.bookings.length; i++){
                 let gName = json.bookings[i].name;
                 let gEmail = json.bookings[i].email;
-                let gPax = json.bookings[i].pax;
+                let gPhoneNo = json.bookings[i].phoneNo;
                 let gId = json.bookings[i].id;
                 let gRemarks = json.bookings[i].remarks;
+                let gDate = json.bookings[i].date;
+                let gTime = json.bookings[i].time;
                 let buttonId = "delete" + gId;
 
                 let row = bookingList.insertRow(bookingList.rows.length);
                 row.insertCell(0).innerHTML = gId;
                 row.insertCell(1).innerHTML = gName;
                 row.insertCell(2).innerHTML = gEmail;
-                row.insertCell(3).innerHTML = gPax;
+                row.insertCell(3).innerHTML = gPhoneNo;
                 row.insertCell(4).innerHTML = gRemarks;
-                row.insertCell(5).innerHTML = "<button id='" + buttonId + "' class='btn btn-danger'>Delete</button>";
+                row.insertCell(5).innerHTML = gDate;
+                row.insertCell(6).innerHTML = gTime;
+                row.insertCell(7).innerHTML = "<button id='" + buttonId + "' class='btn btn-danger'>Delete</button>";
 
                 bookingIds.push(buttonId);
             }
@@ -48,7 +52,7 @@ window.addEventListener("load", function () {
 })
 
 function DeleteBooking(id){
-    let url = 'https://api.sheety.co/fa1df15916bcd68f8496c823102aff92/bookingApp/bookings/' + id;
+    let url = 'https://api.sheety.co/fa1df15916bcd68f8496c823102aff92/dentistBookingApp/bookings/' + id;
     fetch(url, {
       method: 'DELETE',
     })

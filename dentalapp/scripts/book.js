@@ -8,7 +8,6 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
         remarks: userRemarks,
         date: userDate,
         time: userTime
-
       }
     }
     fetch(url, {
