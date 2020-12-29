@@ -80,11 +80,11 @@
                       </div>
                       <div class="form-group">
                         <label for="userDate">Appointment Date</label>
-                        <input type="date" class="form-control" id="userDate">
+                        <input type="date" class="form-control" id="userDate" min="new Date().toLocaleDateString()">
                       </div>
                       <div class="form-group">
                         <label for="userTime">Appointment Time</label>
-                        <input type="time" class="form-control" id="userTime">
+                        <input type="time" class="form-control" id="userTime" min="10:00" max="23:00">
                       </div>
                     <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
             </div>
