@@ -55,21 +55,30 @@
         <!-- Booking Form -->
         <div class="row">
             <div class="col">
-                    <div class="form-group">
+                    <div class="form-group row">
                       <label for="userName">Name</label>
-                      <input style="width: 25em;" type="text" class="form-control" id="userName">
+                      <input style="width: 25em;" type="text" class="form-control" id="userName" placeholder="Enter Name Here">
+                      <div class="invalid-feedback">
+                        Please Enter Your Name.
+                      </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group row">
                       <label for="userEmail">Email</label>
-                      <input style="width: 25em;" type="email" class="form-control" id="userEmail">
+                      <input style="width: 25em;" type="email" class="form-control" id="userEmail" placeholder="example@gmail.com">
+                      <div class="invalid-feedback">
+                        Please Enter Your Email.
+                      </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group row">
                         <label for="userPhone">Phone No.</label>
-                        <input style="width: 25em;" type="tel" class="form-control" id="userPhone">
+                        <input style="width: 25em;" type="tel" class="form-control" id="userPhone" placeholder="0101234567">
+                        <div class="invalid-feedback">
+                          Please Enter Your Phone No.
+                        </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group row">
                         <label for="userRemarks">Remarks</label>
-                        <select style="width: 25em;" class="form-control" id="userRemarks">
+                        <select style="width: 25em;" class="form-control" id="userRemarks" placeholder="Please Select A Remark">
                           <option>Braces</option>
                           <option>Crowning</option>
                           <option>Denture</option>
@@ -78,14 +87,20 @@
                           <option>Root Canal</option>
                           <option>Whitening</option>                        
                         </select>
+                        <div class="invalid-feedback">
+                          Please Select A Remark.
+                        </div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group row">
                         <label for="userDate">Appointment Date</label>
-                        <input style="width: 25em;" type="date" class="form-control" id="userDate">
+                        <input style="width: 25em;" type="date" class="form-control" id="userDate" placeholder="Please Select A Date">
+                        <div class="invalid-feedback">
+                          Please Select A Date.
+                        </div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group row">
                         <label for="userTime">Time</label>
-                        <select style="width: 25em;" class="form-control" id="userTime">
+                        <select style="width: 25em;" class="form-control" id="userTime" placeholder="Please Select A Time">
                           <option>10:00</option>
                           <option>10:30</option>
                           <option>11:00</option>
@@ -101,6 +116,9 @@
                           <option>16:00</option>
                           <option>16:30</option>                      
                         </select>
+                        <div class="invalid-feedback">
+                          Please Select A Time.
+                        </div>
                       </div>
                     <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
             </div>
