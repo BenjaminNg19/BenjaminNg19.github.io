@@ -23,37 +23,55 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
     });
 };
 
-window.addEventListener("load", function(){
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
     let today = new Date().toISOString().slice(0, 10);
     document.getElementById("userDate").setAttribute("min", today);
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName("needs-validation");
+    var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener("submit", function(event) {
+      form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
         }
-        form.classList.add("was-validated");
+        form.classList.add('was-validated');
       }, false);
     });
+  }, false);
+})();
 
-    if(forms === true)
-    {
-      document.getElementById("bookNow").addEventListener("click",function(){
-          let userName = document.getElementById("userName").value;
-          let userEmail = document.getElementById("userEmail").value;
-          let userPhone = document.getElementById("userPhone").value;
-          let userRemarks = document.getElementById("userRemarks").value;
-          let userDate = document.getElementById("userDate").value;
-          let userTime = document.getElementById("userTime").value;
+// window.addEventListener("load", function(){
+//     let today = new Date().toISOString().slice(0, 10);
+//     document.getElementById("userDate").setAttribute("min", today);
 
-          BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
-      });
-    }
-});
+//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//     var forms = document.getElementsByClassName("needs-validation");
+//     // Loop over them and prevent submission
+//     var validation = Array.prototype.filter.call(forms, function(form) {
+//       form.addEventListener("submit", function(event) {
+//         if (form.checkValidity() === false) {
+//           event.preventDefault();
+//           event.stopPropagation();
+//         }
+//         form.classList.add("was-validated");
+//       }, false);
+//     });
+
+//       document.getElementById("bookNow").addEventListener("click",function(){
+//           let userName = document.getElementById("userName").value;
+//           let userEmail = document.getElementById("userEmail").value;
+//           let userPhone = document.getElementById("userPhone").value;
+//           let userRemarks = document.getElementById("userRemarks").value;
+//           let userDate = document.getElementById("userDate").value;
+//           let userTime = document.getElementById("userTime").value;
+
+//           BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
+//       });
+// });
 
 function isNumberKey(evt)
       {
