@@ -42,7 +42,7 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
         form.classList.add('was-validated');
       }, false);
     });
-  }, validated === true );
+  }, validated === true);
 
 
   if (validation === true)
