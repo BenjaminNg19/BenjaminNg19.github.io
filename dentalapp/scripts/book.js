@@ -26,6 +26,7 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
 (function() {
   'use strict';
   window.addEventListener('load', function() {
+    let validated = false;
     let today = new Date().toISOString().slice(0, 10);
     document.getElementById("userDate").setAttribute("min", today);
 
@@ -41,7 +42,9 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
         form.classList.add('was-validated');
       }, false);
     });
-  }, true);
+  }, validated === true );
+
+
   if (validation === true)
     {
       document.getElementById("bookNow").addEventListener("click",function(){
