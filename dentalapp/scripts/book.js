@@ -24,6 +24,9 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
 };
 
 window.addEventListener("load", function(){
+        let today = new Date().toISOString().slice(0, 10);
+        document.getElementById('input').setAttribute("min", today);
+
     document.getElementById("bookNow").addEventListener("click",function(){
         let userName = document.getElementById("userName").value;
         let userEmail = document.getElementById("userEmail").value;
@@ -35,3 +38,6 @@ window.addEventListener("load", function(){
         BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
     });
 });
+
+
+
