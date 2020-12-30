@@ -73,21 +73,21 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
 //         form.classList.add("was-validated");
 //       }, false);
 //     });
-window.addEventListener("load", function(){
-  if (validation === true)
-    {
-      document.getElementById("bookNow").addEventListener("click",function(){
-          let userName = document.getElementById("userName").value;
-          let userEmail = document.getElementById("userEmail").value;
-          let userPhone = document.getElementById("userPhone").value;
-          let userRemarks = document.getElementById("userRemarks").value;
-          let userDate = document.getElementById("userDate").value;
-          let userTime = document.getElementById("userTime").value;
+// window.addEventListener("load", function(){
+//   if (validation === true)
+//     {
+//       document.getElementById("bookNow").addEventListener("click",function(){
+//           let userName = document.getElementById("userName").value;
+//           let userEmail = document.getElementById("userEmail").value;
+//           let userPhone = document.getElementById("userPhone").value;
+//           let userRemarks = document.getElementById("userRemarks").value;
+//           let userDate = document.getElementById("userDate").value;
+//           let userTime = document.getElementById("userTime").value;
 
-          BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
-      });
-    }
-});
+//           BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
+//       });
+//     }
+// });
 
 function isNumberKey(evt)
       {
