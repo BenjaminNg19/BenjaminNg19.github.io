@@ -34,6 +34,7 @@ window.addEventListener("load", function(){
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener("submit", function(event) {
         if (form.checkValidity() === false) {
+          validated = false;
           event.preventDefault();
           event.stopPropagation();
         }
