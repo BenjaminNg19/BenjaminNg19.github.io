@@ -26,7 +26,7 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    let validated = false;
+    var validated = false;
     let today = new Date().toISOString().slice(0, 10);
     document.getElementById("userDate").setAttribute("min", today);
 
