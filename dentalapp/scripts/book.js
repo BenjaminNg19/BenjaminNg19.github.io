@@ -24,74 +24,29 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
     });
 };
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    var validated = false;
+window.addEventListener("load", function(){
     let today = new Date().toISOString().slice(0, 10);
     document.getElementById("userDate").setAttribute("min", today);
-
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-  })(); 
-
-
-  if (validation === true)
-    {
-      document.getElementById("bookNow").addEventListener("click",function(){
+    
+    document.getElementById("bookNow").addEventListener("click",function(){
           let userName = document.getElementById("userName").value;
+          if(userName.value = null) alert("Name cannot be empty!");
           let userEmail = document.getElementById("userEmail").value;
+          if(userEmail.value = null) alert("Email cannot be empty!");
           let userPhone = document.getElementById("userPhone").value;
+          if(userPhone.value = null) alert("Phone No. cannot be empty!");
           let userRemarks = document.getElementById("userRemarks").value;
+          if(userRemarks.value = null) alert("Remarks cannot be empty!");
           let userDate = document.getElementById("userDate").value;
+          if(userDate.value = null) alert("Date cannot be empty!");
           let userTime = document.getElementById("userTime").value;
+          if(userTime.value = null) alert("Time cannot be empty!");
 
+          if(userName.value != null && userEmail.value != null && userPhone.value != null && 
+             userRemarks.value != null && userDate.value != null && userTime.value != null)
           BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
       });
-    }
-
-// window.addEventListener("load", function(){
-//     let today = new Date().toISOString().slice(0, 10);
-//     document.getElementById("userDate").setAttribute("min", today);
-
-//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-//     var forms = document.getElementsByClassName("needs-validation");
-//     // Loop over them and prevent submission
-//     var validation = Array.prototype.filter.call(forms, function(form) {
-//       form.addEventListener("submit", function(event) {
-//         if (form.checkValidity() === false) {
-//           event.preventDefault();
-//           event.stopPropagation();
-//         }
-//         form.classList.add("was-validated");
-//       }, false);
-//     });
-// window.addEventListener("load", function(){
-//   if (validation === true)
-//     {
-//       document.getElementById("bookNow").addEventListener("click",function(){
-//           let userName = document.getElementById("userName").value;
-//           let userEmail = document.getElementById("userEmail").value;
-//           let userPhone = document.getElementById("userPhone").value;
-//           let userRemarks = document.getElementById("userRemarks").value;
-//           let userDate = document.getElementById("userDate").value;
-//           let userTime = document.getElementById("userTime").value;
-
-//           BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
-//       });
-//     }
-// });
+});
 
 function isNumberKey(evt)
       {

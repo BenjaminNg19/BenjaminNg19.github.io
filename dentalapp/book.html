@@ -61,31 +61,21 @@
         <!-- Booking Form -->
         <div class="row">
             <div class="col">
-                  <form class="needs-validation" novalidate>
                     <div class="form-group">
                       <label for="userName">Name</label>
-                      <input style="width: 25em;" type="text" class="form-control" id="userName" placeholder="Enter Name Here" required>
-                      <div class="invalid-feedback">
-                        Please Enter Your Name.
-                      </div>
+                      <input style="width: 25em;" type="text" class="form-control" id="userName" placeholder="Enter Name Here" >
                     </div>
                     <div class="form-group">
                       <label for="userEmail">Email</label>
-                      <input style="width: 25em;" type="email" class="form-control" id="userEmail" placeholder="example@gmail.com" required>
-                      <div class="invalid-feedback">
-                        Please Enter Your Email.
-                      </div>
+                      <input style="width: 25em;" type="email" class="form-control" id="userEmail" placeholder="example@gmail.com">
                     </div>
                     <div class="form-group">
                         <label for="userPhone">Phone No.</label>
-                        <input style="width: 25em;" type="tel" class="form-control" id="userPhone" placeholder="0101234567" onkeypress="return isNumberKey(event)" required>
-                        <div class="invalid-feedback">
-                          Please Enter Your Phone No.
-                        </div>
+                        <input style="width: 25em;" type="tel" class="form-control" id="userPhone" placeholder="0101234567" onkeypress="return isNumberKey(event)">
                     </div>
                     <div class="form-group">
                         <label for="userRemarks">Remarks</label>
-                        <select style="width: 25em;" class="form-control" id="userRemarks" placeholder="Please Select A Remark" required>
+                        <select style="width: 25em;" class="form-control" id="userRemarks" placeholder="Please Select A Remark" >
                           <option>Braces</option>
                           <option>Crowning</option>
                           <option>Denture</option>
@@ -94,20 +84,14 @@
                           <option>Root Canal</option>
                           <option>Whitening</option>                        
                         </select>
-                        <div class="invalid-feedback">
-                          Please Select A Remark.
-                        </div>
                       </div>
                       <div class="form-group">
                         <label for="userDate">Appointment Date</label>
-                        <input style="width: 25em;" type="date" class="form-control" id="userDate" placeholder="Please Select A Date" required>
-                        <div class="invalid-feedback">
-                          Please Select A Date.
-                        </div>
+                        <input style="width: 25em;" type="date" class="form-control" id="userDate" placeholder="Please Select A Date">
                       </div>
                       <div class="form-group">
                         <label for="userTime">Time</label>
-                        <select style="width: 25em;" class="form-control" id="userTime" placeholder="Please Select A Time" required>
+                        <select style="width: 25em;" class="form-control" id="userTime" placeholder="Please Select A Time">
                           <option>10:00</option>
                           <option>10:30</option>
                           <option>11:00</option>
@@ -123,9 +107,6 @@
                           <option>16:00</option>
                           <option>16:30</option>                      
                         </select>
-                        <div class="invalid-feedback">
-                          Please Select A Time.
-                        </div>
                       </div>
                     <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
                   </form>
