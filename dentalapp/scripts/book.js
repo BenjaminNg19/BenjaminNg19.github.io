@@ -27,20 +27,6 @@ window.addEventListener("load", function(){
         let today = new Date().toISOString().slice(0, 10);
         document.getElementById("userDate").setAttribute("min", today);
 
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function(form)
-        {
-          form.addEventListener('submit', function(event) 
-          {
-            if (form.checkValidity() === false) 
-            {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-
     document.getElementById("bookNow").addEventListener("click",function(){
         let userName = document.getElementById("userName").value;
         let userEmail = document.getElementById("userEmail").value;
@@ -52,6 +38,24 @@ window.addEventListener("load", function(){
         BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
     });
 });
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
 
 
 
