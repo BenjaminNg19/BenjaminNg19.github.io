@@ -72,7 +72,7 @@
                     </div>
                     <div class="form-group">
                         <label for="userPhone">Phone No.</label>
-                        <input style="width: 25em;" type="number" class="form-control" id="userPhone" placeholder="0101234567" required>
+                        <input style="width: 25em;" type="tel" class="form-control" id="userPhone" placeholder="0101234567" onkeypress="return isNumberKey(event)" required>
                         <div class="invalid-feedback">
                           Please Enter Your Phone No.
                         </div>

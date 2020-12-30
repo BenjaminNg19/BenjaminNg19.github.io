@@ -34,7 +34,6 @@ window.addEventListener("load", function(){
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener("submit", function(event) {
         if (form.checkValidity() === false) {
-          validated = false;
           event.preventDefault();
           event.stopPropagation();
         }
@@ -56,6 +55,15 @@ window.addEventListener("load", function(){
       });
     }
 });
+
+function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
 
 
 
