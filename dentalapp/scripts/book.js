@@ -27,21 +27,6 @@ window.addEventListener("load", function(){
     let today = new Date().toISOString().slice(0, 10);
     document.getElementById("userDate").setAttribute("min", today);
 
-    document.getElementById("bookNow").addEventListener("click",function(){
-        let userName = document.getElementById("userName").value;
-        let userEmail = document.getElementById("userEmail").value;
-        let userPhone = document.getElementById("userPhone").value;
-        let userRemarks = document.getElementById("userRemarks").value;
-        let userDate = document.getElementById("userDate").value;
-        let userTime = document.getElementById("userTime").value;
-
-        BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
-    });
-});
-
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
@@ -51,11 +36,24 @@ window.addEventListener("load", function(){
           event.preventDefault();
           event.stopPropagation();
         }
+        else
+        {
+          document.getElementById("bookNow").addEventListener("click",function(){
+            let userName = document.getElementById("userName").value;
+            let userEmail = document.getElementById("userEmail").value;
+            let userPhone = document.getElementById("userPhone").value;
+            let userRemarks = document.getElementById("userRemarks").value;
+            let userDate = document.getElementById("userDate").value;
+            let userTime = document.getElementById("userTime").value;
+    
+            BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
+        });
+        }
         form.classList.add('was-validated');
       }, false);
     });
-  }, false);
-})();
+});
+
 
 
 
