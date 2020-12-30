@@ -1,3 +1,4 @@
+
 function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime){
     let url = 'https://api.sheety.co/fa1df15916bcd68f8496c823102aff92/dentistBookingApp/bookings';
     let body = {
@@ -42,7 +43,8 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
         form.classList.add('was-validated');
       }, false);
     });
-  }, validated === true);
+  }, false);
+  })(); 
 
 
   if (validation === true)
@@ -58,7 +60,6 @@ function BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime
           BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
       });
     }
-})();
 
 // window.addEventListener("load", function(){
 //     let today = new Date().toISOString().slice(0, 10);
