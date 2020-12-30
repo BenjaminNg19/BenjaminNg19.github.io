@@ -30,20 +30,20 @@ window.addEventListener("load", function(){
     
     document.getElementById("bookNow").addEventListener("click",function(){
           let userName = document.getElementById("userName").value;
-          if(userName = "") alert("Name cannot be empty!");
+          if(userName === "") alert("Name cannot be empty!");
           let userEmail = document.getElementById("userEmail").value;
-          if(userEmail = "") alert("Email cannot be empty!");
+          if(userEmail === "") alert("Email cannot be empty!");
           let userPhone = document.getElementById("userPhone").value;
-          if(userPhone = "") alert("Phone No. cannot be empty!");
+          if(userPhone === "") alert("Phone No. cannot be empty!");
           let userRemarks = document.getElementById("userRemarks").value;
-          if(userRemarks = "") alert("Remarks cannot be empty!");
+          if(userRemarks === "") alert("Remarks cannot be empty!");
           let userDate = document.getElementById("userDate").value;
-          if(userDate = "") alert("Date cannot be empty!");
+          if(userDate === "") alert("Date cannot be empty!");
           let userTime = document.getElementById("userTime").value;
-          if(userTime = "") alert("Time cannot be empty!");
+          if(userTime === "") alert("Time cannot be empty!");
 
-          if(userName != "" && userEmail != "" && userPhone != "" && 
-             userRemarks != "" && userDate != "" && userTime != "")
+          if(userName !== "" && userEmail !== "" && userPhone !== "" && 
+             userRemarks !== "" && userDate !== "" && userTime !== "")
           BookNow(userName, userEmail, userPhone, userRemarks, userDate, userTime);
       });
 });
